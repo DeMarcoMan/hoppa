@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="Powered by Marco">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="hoppa">
+  <link rel="apple-touch-icon" href="icons/Icon-180.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>hoppa</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyAatF9r6_l9tizfsq4gI6YXKdHdqjmwtN4",
+    authDomain: "hoppa-f95a7.firebaseapp.com",
+    databaseURL: "https://hoppa-f95a7.firebaseio.com",
+    projectId: "hoppa-f95a7",
+    storageBucket: "hoppa-f95a7.appspot.com",
+    messagingSenderId: "220551833456",
+    appId: "1:220551833456:web:7366fde5e992a77f08d1b5"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+
+  <script src="main.dart.js?version=3" type="application/javascript"></script>
+</body>
+</html>
