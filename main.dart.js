@@ -49631,9 +49631,9 @@ if(p==null)p=0
 o=n.z.h(0,"vrije keus")
 if(o==null)o=0
 return m+t+s+r+q+p+o},
-lc:function(a){return this.HC(a)},
-HC:function(a){var t=0,s=P.P(u.H),r=this,q,p,o,n,m,l
-var $async$lc=P.L(function(b,c){if(b===1)return P.M(c,s)
+lc:function(a,b){return this.HC(a,b)},
+HC:function(a,b){var t=0,s=P.P(u.H),r=this,q,p,o,n,m,l
+var $async$lc=P.L(function(c,d){if(c===1)return P.M(d,s)
 while(true)switch(t){case 0:l=r.z
 l=l.gbc(l)
 l=P.K(l,!0,H.x(l).j("j.E"))
@@ -49646,7 +49646,7 @@ r.cx=l+q+r.gnm()
 r.ch=!0
 p=new P.bT(Date.now(),!1)
 o=C.e.i(H.a8x(p))+C.c.n4(C.e.i(H.a4P(p)),2,"0")+C.c.n4(C.e.i(H.a8t(p)),2,"0")
-q=J.m9(a)
+q=J.m9(b)
 l=r.geb()
 n=r.geb()>=63?35:0
 m=P.ah(["name",q,"score",l+n+r.gnm(),"date",H.a4R(o,null)],u.X,u.z)
@@ -49657,24 +49657,24 @@ return P.Q(new O.mx(l,l,n).B(0,m),$async$lc)
 case 4:l=r.geb()
 q=r.geb()>=63?35:0
 t=5
-return P.Q(r.l1(a,l+q+r.gnm()),$async$lc)
+return P.Q(r.l1(a,b,l+q+r.gnm()),$async$lc)
 case 5:r.Fk()
 r.Fi()
 r.Gs()
 case 3:return P.N(null,s)}})
 return P.O($async$lc,s)},
-l1:function(a,b){return this.ZN(a,b)},
-ZN:function(a,b){var t=0,s=P.P(u.H),r,q,p,o,n
-var $async$l1=P.L(function(c,d){if(c===1)return P.M(d,s)
-while(true)switch(t){case 0:a=C.c.GI(a.toUpperCase())
+l1:function(a,b,c){return this.ZN(a,b,c)},
+ZN:function(a,b,c){var t=0,s=P.P(u.H),r,q,p,o,n
+var $async$l1=P.L(function(d,e){if(d===1)return P.M(e,s)
+while(true)switch(t){case 0:b=C.c.GI(b.toUpperCase())
 r=O.qZ()
 q=r.geG().h1(0,"players")
 t=2
-return P.Q(new O.mx(q,q,r).GX(0,"name",a).l6(),$async$l1)
-case 2:p=d
+return P.Q(new O.mx(q,q,r).GX(0,"name",b).l6(),$async$l1)
+case 2:p=e
 t=p.gfm().length===0?3:5
 break
-case 3:o=P.ah(["name",a,"admin",!1,"highscore",b,"pincode",null],u.X,u.z)
+case 3:o=P.ah(["email",a,"name",b,"highscore",c],u.X,u.z)
 r=O.qZ()
 q=r.geG().h1(0,"players")
 t=6
@@ -49684,13 +49684,13 @@ break
 case 5:r=p.gfm()[0]
 n=O.YD(r.a.c,r.b).h(0,"highscore")
 r=C.b.ga6(p.gfm()[0].a.a.split("/"))
-t=b>n?7:8
+t=c>n?7:8
 break
 case 7:q=O.qZ().geG().h1(0,"players")
 r=q.kp(0,r)
 E.eX(r,$.k2())
 t=9
-return P.Q(r.GM(O.a5g(P.ah(["highscore",b],u.X,u.z))),$async$l1)
+return P.Q(r.GM(O.a5g(P.ah(["highscore",c],u.X,u.z))),$async$l1)
 case 9:case 8:case 4:return P.N(null,s)}})
 return P.O($async$l1,s)}}
 Q.Rj.prototype={
@@ -49852,7 +49852,7 @@ p.z.m(0,m,p.qx(m))
 if(p.z.h(0,"hoppa")!=null)if(p.z.h(0,"hoppa")>0)if(p.qx("hoppa")===50)if(m==="enen"||m==="twee\xebn"||m==="drie\xebn"||m==="vieren"||m==="vijven"||m==="zessen"||m==="drie dezelfde"||m==="vier dezelfde"||m==="vrije keus"){q=p.z
 q.m(0,"hoppa",q.h(0,"hoppa")+100)}p.Gs()
 p.Q.m(0,m,!1)
-p.lc(o)
+p.lc(null,o)
 p.b3()
 t=p.ch?2:3
 break
