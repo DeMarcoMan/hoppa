@@ -7,16 +7,16 @@ const RESOURCES = {
 "assets/assets/google_logo.png": "b75aecaf9e70a9b1760497e33bcd6db1",
 "assets/FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "9ba0198b09af11213abed291f51843c5",
+"assets/NOTICES": "0612a4f4e1c14f8ddc5d67f7ce82e9e0",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "2aa350bd2aeab88b601a593f793734c0",
 "favicon.png": "20bb96428897eea299ecbdb44d0e543a",
 "icons/Icon-180.png": "be85d13bd6fee5604434f35e9db3cb6b",
-"index.html": "0f51db26e38f534911b38ca1ccea62d1",
-"/": "0f51db26e38f534911b38ca1ccea62d1",
-"main.dart.js": "207c0823828bfd0274710e978b16e92d",
+"index.html": "ba4818d5408907666ca47cd6541390f6",
+"/": "ba4818d5408907666ca47cd6541390f6",
+"main.dart.js": "6e70cbed40dba45eda1d133be605b251",
 "manifest.json": "d1f46ec73995ff99b6af5e5bce70c3d3"
 };
 
