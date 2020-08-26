@@ -50762,7 +50762,7 @@ $S:78}
 E.E2.prototype={
 D:function(a){return new T.cX(new E.VC(),null)}}
 E.VC.prototype={
-$1:function(a){var t=null,s=Y.dW(a,!0,u.sr),r=u.t,q=T.dY(H.a([new T.bI(C.o1,t,t,L.aW("je score",t,t,t,$.pU(),t),t),L.aW("v8",t,t,t,A.c9(t,t,$.k6(),t,t,t,t,t,t,t,t,12,t,t,t,t,!0,t,t,t,t,t,t),t)],r),C.J,C.b5,C.G),p=M.aJ(t,t,t,t,t,5,t,t,t),o=M.aJ(t,t,t,t,t,5,t,t,t),n=M.aJ(t,t,t,t,t,5,t,t,t),m=C.e.i(s.gnp()),l=M.aJ(t,t,t,t,t,5,t,t,t),k=s.ged(),j=s.ged()>=63?35:0
+$1:function(a){var t=null,s=Y.dW(a,!0,u.sr),r=u.t,q=T.dY(H.a([new T.bI(C.o1,t,t,L.aW("je score",t,t,t,$.pU(),t),t),L.aW("v9",t,t,t,A.c9(t,t,$.k6(),t,t,t,t,t,t,t,t,12,t,t,t,t,!0,t,t,t,t,t,t),t)],r),C.J,C.b5,C.G),p=M.aJ(t,t,t,t,t,5,t,t,t),o=M.aJ(t,t,t,t,t,5,t,t,t),n=M.aJ(t,t,t,t,t,5,t,t,t),m=C.e.i(s.gnp()),l=M.aJ(t,t,t,t,t,5,t,t,t),k=s.ged(),j=s.ged()>=63?35:0
 r=H.a([q,new E.d6("enen",t),new E.d6("twee\xebn",t),new E.d6("drie\xebn",t),new E.d6("vieren",t),new E.d6("vijven",t),new E.d6("zessen",t),p,new E.DV(t),o,new E.d6("drie dezelfde",t),new E.d6("vier dezelfde",t),new E.d6("volle bak",t),new E.d6("korte straat",t),new E.d6("lange straat",t),new E.d6("hoppa",t),new E.d6("vrije keus",t),n,new E.uC("score beneden",m,t),l,new E.uC("totaalscore",C.e.i(k+j+s.gnp()),t)],r)
 j=G.a9u(r,!0,!0,!0)
 r=r.length
