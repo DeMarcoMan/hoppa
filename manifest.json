@@ -2,7 +2,7 @@
     "name": "hoppa",
     "short_name": "hoppa",
     "start_url": ".",
-    "display": "minimal-ui",
+    "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
     "description": "Powered by Marco",
@@ -15,48 +15,8 @@
             "type": "image/png"
         },
         {
-            "src": "icons/Icon-180.png",
-            "sizes": "180x180",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-152.png",
-            "sizes": "152x152",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-144.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-120.png",
-            "sizes": "120x120",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-114.png",
-            "sizes": "114x114",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-76.png",
-            "sizes": "76x76",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-72.png",
-            "sizes": "72x72",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-60.png",
-            "sizes": "60x60",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-57.png",
-            "sizes": "57x57",
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ]

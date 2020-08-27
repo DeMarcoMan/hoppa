@@ -5,9 +5,10 @@ const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "assets/AssetManifest.json": "8c045e0a15f86690de1ee257d5191de8",
 "assets/assets/google_logo.png": "b75aecaf9e70a9b1760497e33bcd6db1",
-"assets/FontManifest.json": "18eda8e36dfa64f14878d07846d6e17f",
+"assets/FontManifest.json": "5a32d4310a6f5d9a6b651e75ba0d7372",
+"assets/fonts/MaterialIcons-Regular.otf": "a68d2a28c526b3b070aefca4bac93d25",
 "assets/fonts/MaterialIcons-Regular.ttf": "56d3ffdef7a25659eab6a68a3fbfaf16",
-"assets/NOTICES": "0612a4f4e1c14f8ddc5d67f7ce82e9e0",
+"assets/NOTICES": "cb30a00050d59acd6a24746ac2decc83",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "115e937bb829a890521f72d2e664b632",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-brands-400.ttf": "5a37ae808cf9f652198acde612b5328d",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "2bca5ec802e40d3f4b60343e346cedde",
@@ -17,7 +18,9 @@ const RESOURCES = {
 "icons/favicon-32.png": "2a7f0ca0315934433fce7a30ccbceb44",
 "icons/favicon-96.png": "891e2487fa0df3013e28a88de28f7ab5",
 "icons/Icon-180.png": "be85d13bd6fee5604434f35e9db3cb6b",
+"icons/Icon-192.png": "e466bd1c489f41de11fb8f3609702245",
 "icons/Icon-32.png": "5eb3cfc198c4dbb87f720fcb793191fa",
+"icons/Icon-512.png": "a29b638e1c367b1fd3ff96d2b29e9293",
 "icons/icon_1024.png": "31758d9ad92100177660d00d43c00ed0",
 "icons/icon_114.png": "c6ccbeae759a428e639617945a731fd4",
 "icons/icon_120.png": "09760e7ec0f02bdfcd871208a83771a5",
@@ -29,10 +32,10 @@ const RESOURCES = {
 "icons/icon_60.png": "f8ebb8079638cc5b4780f17cda588ce3",
 "icons/icon_72.png": "c3c7c4af3d895265244308eea01652bf",
 "icons/icon_76.png": "913155c7bd60527b1185480fc78c3c46",
-"index.html": "792a50e1e0493a4a5ee705953e5dfbb9",
-"/": "792a50e1e0493a4a5ee705953e5dfbb9",
-"main.dart.js": "293c427c08d97a120acf05fb48eab0b0",
-"manifest.json": "4cb6590a0d15147af32ea1d102d2da21"
+"index.html": "100d9668d3f57ac9125598149e932833",
+"/": "100d9668d3f57ac9125598149e932833",
+"main.dart.js": "eac5b2a3e89c47d1a03a3ca9da57f5e8",
+"manifest.json": "7a55ed5617bea4c38ed9657fedb8f677"
 };
 
 // The application shell files that are downloaded before a service worker can
@@ -41,7 +44,7 @@ const CORE = [
   "/",
 "main.dart.js",
 "index.html",
-"assets/LICENSE",
+"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 
@@ -49,8 +52,8 @@ const CORE = [
 self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
-      // Provide a no-cache param to ensure the latest version is downloaded.
-      return cache.addAll(CORE.map((value) => new Request(value, {'cache': 'no-cache'})));
+      // Provide a 'reload' param to ensure the latest version is downloaded.
+      return cache.addAll(CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
@@ -123,7 +126,7 @@ self.addEventListener("fetch", (event) => {
   if (event.request.url == origin || event.request.url.startsWith(origin + '/#')) {
     key = '/';
   }
-  // If the URL is not the the RESOURCE list, skip the cache.
+  // If the URL is not the RESOURCE list, skip the cache.
   if (!RESOURCES[key]) {
     return event.respondWith(fetch(event.request));
   }
@@ -133,7 +136,7 @@ self.addEventListener("fetch", (event) => {
         // Either respond with the cached resource, or perform a fetch and
         // lazily populate the cache. Ensure the resources are not cached
         // by the browser for longer than the service worker expects.
-        var modifiedRequest = new Request(event.request, {'cache': 'no-cache'});
+        var modifiedRequest = new Request(event.request, {'cache': 'reload'});
         return response || fetch(modifiedRequest).then((response) => {
           cache.put(event.request, response.clone());
           return response;
@@ -146,11 +149,11 @@ self.addEventListener("fetch", (event) => {
 self.addEventListener('message', (event) => {
   // SkipWaiting can be used to immediately activate a waiting service worker.
   // This will also require a page refresh triggered by the main worker.
-  if (event.message == 'skipWaiting') {
+  if (event.data === 'skipWaiting') {
     return self.skipWaiting();
   }
 
-  if (event.message = 'downloadOffline') {
+  if (event.message === 'downloadOffline') {
     downloadOffline();
   }
 });
@@ -170,8 +173,8 @@ async function downloadOffline() {
   }
   for (var resourceKey in Object.keys(RESOURCES)) {
     if (!currentContent[resourceKey]) {
-      resources.add(resourceKey);
+      resources.push(resourceKey);
     }
   }
-  return Cache.addAll(resources);
+  return contentCache.addAll(resources);
 }
